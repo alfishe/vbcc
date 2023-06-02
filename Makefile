@@ -17,9 +17,9 @@ NLDFLAGS = $(LDFLAGS)
 all: bin bin/vc$X bin/vprof$X bin/vbcc$(TARGET)$X #bin/vcpp$X
 
 install: all
-	$(INSTALL) -D bin/vc$X $(DESTDIR)/bin/vc$X
-	$(INSTALL) -D bin/vprof$X $(DESTDIR)/bin/vprof$X
-	$(INSTALL) -D bin/vbcc$(TARGET)$X $(DESTDIR)/bin/vbcc$(TARGET)$X
+	$(INSTALL) bin/vc$X $(DESTDIR)/bin/vc$X
+	$(INSTALL) bin/vprof$X $(DESTDIR)/bin/vprof$X
+	$(INSTALL) bin/vbcc$(TARGET)$X $(DESTDIR)/bin/vbcc$(TARGET)$X
 
 install-doc: doc/vbcc.pdf
 	$(INSTALL) -D doc/vbcc.pdf $(DESTDIR)/share/doc/vbcc/vbcc.pdf
